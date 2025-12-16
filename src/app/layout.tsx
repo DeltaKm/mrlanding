@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Emme Erre Animazione - Intrattenimento ed Eventi",
-  description: "Agenzia di animazione leader per eventi aziendali, feste private, matrimoni e intrattenimento per bambini. Diamo vita ai tuoi eventi speciali.",
+  description: "Agenzia di animazione leader per eventi, feste private, matrimoni e intrattenimento per bambini. Diamo vita ai tuoi eventi speciali.",
   keywords: ["animazione", "eventi", "feste bambini", "mascotte", "intrattenimento aziendale", "spettacoli"],
   authors: [{ name: "EMME ERRE ANIMAZIONE" }],
   openGraph: {
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
